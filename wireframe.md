@@ -1,3 +1,8 @@
+# Прототип интерфейса Telegram-бота расписания вуза
+
+## UI Flow (диаграмма экранов)
+
+```mermaid
 flowchart TD
     subgraph Screen1 [Главное меню]
         direction TB
