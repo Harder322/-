@@ -1,0 +1,41 @@
+@startuml
+class User {
+  +user_id: int
+  +username: string
+  +group_number: string
+  +notifications_enabled: bool
+  +getGroup(): string
+  +setGroup(group: string): void
+  +toggleNotifications(): void
+}
+
+class Group {
+  +group_number: string
+  +faculty: string
+  +course: int
+  +getSchedule(week: int): List<Schedule>
+}
+
+class Schedule {
+  +id: int
+  +group_number: string
+  +day: date
+  +week_type: int
+  +getPairs(): List<Lesson>
+}
+
+class Lesson {
+  +id: int
+  +schedule_id: int
+  +start_time: time
+  +end_time: time
+  +subject: string
+  +lesson_type: string
+  +teacher: string
+  +room: string
+}
+
+User "1" --> "0..1" Group : belongs to
+Group "1" --> "*" Schedule : has
+Schedule "1" --> "*" Lesson : contains
+@enduml
