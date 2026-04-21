@@ -1,8 +1,3 @@
-# Прототип интерфейса Telegram-бота
-
-## UI Flow (Mermaid)
-
-```mermaid
 flowchart TD
     subgraph Screen1 [Главное меню]
         direction TB
@@ -48,12 +43,12 @@ flowchart TD
         N5["[🔙 Назад в меню]"]
     end
 
-    Screen1 -->|Нажатие "Сегодня"| Screen2
-    Screen1 -->|Нажатие "Неделя"| Screen3
-    Screen1 -->|Нажатие "Сменить группу"| Screen4
-    Screen1 -->|Нажатие "Настройки"| Screen5
-    Screen2 -->|Нажатие "Назад"| Screen1
-    Screen3 -->|Нажатие "Назад"| Screen1
-    Screen4 -->|Подтверждение| Screen1
+    Screen1 -->|Сегодня| Screen2
+    Screen1 -->|Неделя| Screen3
+    Screen1 -->|Сменить группу| Screen4
+    Screen1 -->|Настройки| Screen5
+    Screen2 -->|Назад| Screen1
+    Screen3 -->|Назад| Screen1
+    Screen4 -->|Подтвердить| Screen1
     Screen4 -->|Отмена| Screen1
-    Screen5 -->|Нажатие "Назад"| Screen1
+    Screen5 -->|Назад| Screen1
